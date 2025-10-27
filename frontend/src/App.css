@@ -1,0 +1,131 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.city-input {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.city-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.search-btn {
+  padding: 15px 30px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 600;
+}
+
+.search-btn:hover:not(:disabled) {
+  background: #764ba2;
+}
+
+.search-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #fee;
+  color: #c33;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.weather-card h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.temperature {
+  font-size: 4em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.condition {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2em;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.value {
+  font-size: 1.3em;
+  font-weight: 600;
+}
