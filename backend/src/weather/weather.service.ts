@@ -31,7 +31,7 @@ export class WeatherService {
 
       const data = response.data;
 
-      // Return simplified weather information
+      // weather info
       return {
         city: data.name,
         temperature: data.main.temp,
@@ -44,7 +44,7 @@ export class WeatherService {
       if (error.response?.status === 404) {
         throw new HttpException('City not found', HttpStatus.NOT_FOUND);
       }
-      throw new HttpException(
+      throw new HttpException( // if nag error
         'Error fetching weather data',
         HttpStatus.INTERNAL_SERVER_ERROR,
       );

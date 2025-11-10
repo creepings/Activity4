@@ -8,7 +8,7 @@ async function bootstrap() {
   // Enable CORS for frontend communication
   app.enableCors();
 
-  // Swagger configuration
+  // Swagger
   const config = new DocumentBuilder()
     .setTitle('Weather Proxy API')
     .setDescription('A proxy service that fetches weather data from OpenWeatherMap API')
@@ -19,8 +19,8 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
-  await app.listen(3000);
-  console.log('🚀 Weather Proxy API running on http://localhost:3000');
-  console.log('📚 Swagger docs available at http://localhost:3000/api');
+  await app.listen(3001);
+  console.log('Weather API at http://localhost:3001');
+  console.log('Swagger at http://localhost:3001/api');
 }
 bootstrap();
